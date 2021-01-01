@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+
+supplyLoc = "/sys/class/power_supply/BAT0/"
+
+currentFile = open(supplyLoc + "current_now")
+voltageFile = open(supplyLoc + "voltage_now")
+
+currentNow = currentFile.read()
+voltageNow = voltageFile.read()
+
+# Convert from micro
+current = float(currentNow)/1000000
+voltage = float(voltageNow)/1000000
+power = current * voltage 
+
+print('')
+print("%10s: %6.2f A" % ("Current", current))
+print("%10s: %6.2f V" % ("Voltage", voltage))
+print("%10s: %6.2f W" % ("Power",   power  ))
+
