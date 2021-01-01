@@ -14,7 +14,7 @@ voltage = float(voltageNow)/1000000
 power = current * voltage 
 
 print('')
-print("%10s: %6.2f A" % ("Current", current))
-print("%10s: %6.2f V" % ("Voltage", voltage))
-print("%10s: %6.2f W" % ("Power",   power  ))
+print("\t%10s: %6.2f A" % ("Current", current))
+print("\t%10s: %6.2f V" % ("Voltage", voltage))
+print("\t%10s: %6.2f W" % ("Power",   power  ))
 
